@@ -1,0 +1,4 @@
+include reportserver/schema.sql
+graft reportserver/static
+graft reportserver/templates
+global-exclude *.pyc

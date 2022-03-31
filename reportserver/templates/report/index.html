@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <table>
+  <thead><tr><th>participant</th><th>finished</th><th>client MD5</th></tr></thead>
+  <tbody>
+  {% for report in reports %}
+    <tr><td>{{ report['participant'] }}</td><td>{{ report['completedDate'] }}</td><td>{{ report['clientMD5'] }}</td></tr>
+  {% endfor %}
+  </tbody>
+  <tfoot></tfoot>
+  </table>
+{% endblock %}
